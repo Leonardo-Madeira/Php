@@ -9,7 +9,6 @@ foreach ($clientes as $key => $value) {
   //value é o valor(elemento) do array, que no caso é o nome dos clientes.
 }
 
-
 // OU
 echo 'OU <br>';
 
