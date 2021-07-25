@@ -11,6 +11,6 @@ class Nome
 }
 
 //Instanciar a class.
-  Nome::printNome();
-  Nome::$nomeCompleto; // desta forma, a variavel statica não é instanciada e nao contem erro
-  echo self::$nomeCompleto;
+Nome::printNome();
+Nome::$nomeCompleto; // desta forma, a variavel statica não é instanciada e nao contem erro
+echo self::$nomeCompleto;
