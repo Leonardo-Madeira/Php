@@ -1,17 +1,13 @@
 <?php
 
-class Aplicacao
-{
-  public function runApp()
-  {
+class Aplicacao{
+  public function runApp(){
     echo 'rodando!';
   }
 }
 
-class Cliente extends Aplicacao
-{
-  public static function nomeCliente()
-  {
+class Cliente extends Aplicacao{
+  public static function nomeCliente(){
     echo 'Leonardo Madeira';
   }
 }
