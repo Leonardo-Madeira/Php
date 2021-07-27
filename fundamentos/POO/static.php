@@ -1,11 +1,8 @@
 <?php   // public static
 class Nome
 {
-
   public static $nomeCompleto = 'Leonardo Madeira';
-
-  public static function printNome()
-  {
+  public static function printNome(){
     echo 'Leonardo';
   }
 }
