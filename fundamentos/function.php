@@ -1,6 +1,5 @@
 <?php
-function sobreNome($nome)
-{
+function sobreNome($nome){
   echo "$nome Madeira";
 }
 
