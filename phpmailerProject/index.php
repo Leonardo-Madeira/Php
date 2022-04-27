@@ -23,17 +23,17 @@
             
             //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
             $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'smtp.mailtrap.io';                     //Set the SMTP server to send through
+            $mail->Host       = 'smtp.titan.email';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = '7f17635b6f909d';                       //SMTP username
-            $mail->Password   = '69ab488d803b71';                       //SMTP password
-            $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
-            $mail->Port       = 2525;                                   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
+            $mail->Username   = 'contato@leonardomadeira.com.br';                       //SMTP username
+            $mail->Password   = '7799abab#Leo';                       //SMTP password
+            $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            //25 or 465 or 587 or 2525
             
             //Recipients
-            $mail->setFrom('atendimento@urldaempresa.com.br', 'Leonardo Madeira'); //Quem esta enviando
-            $mail->addAddress('nomedocliente@gmail.com', 'Unknown');     //Pessoa que vai receber o recado
+            $mail->setFrom('contato@leonardomadeira.com.br', 'Leonardo Madeira');       //Quem esta enviando
+            $mail->addAddress('leo.madeira96@gmail.com', 'Nome do cliente');     //Pessoa que vai receber o recado
             
             /*
             //Attachments
@@ -43,15 +43,15 @@
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Mensagem automatiza :P';                 //Titulo do email
-            $mail->Body    = '<h1>Olá, tudo bem? Fico feliz por ter entrado em contato comigo, assim que possivel retornarei o contato <b>in bold! :P</b></h1><br>Outra linha: Lorem Ipsum.';  //Podemos utilizar html
-            $mail->AltBody = 'Olá, tudo bem? Fico feliz por ter entrado em contato comigo.\n'; //Nesta parte não podemos usar html
+            $mail->Subject = 'Titulo do email';                 //Titulo do email
+            $mail->Body    = '<h1>Mensagem: Teste</h1>';  //Podemos utilizar html
+            $mail->AltBody = 'Teste 2'; //Nesta parte não podemos usar html
 
             $mail->send(); //Send envia o email
             
             echo 'Mensagem enviada com sucesso! :)';
         } catch (Exception $e) {
-            echo "Mensagem não foi enviada!!! :( <br> Mailer Error: {$mail->ErrorInfo}";
+            echo "Mensagem não foi enviada!!! :(";
         }
 
     ?>
